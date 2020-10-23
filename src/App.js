@@ -1,7 +1,9 @@
 import React from 'react';
-import Stylists from './components/Stylists';
+// import Stylists from './components/Stylists';
 import StylistRequest from './components/StylistRequest';
 import './main.scss';
+import 'materialize-css';
+import {Footer} from 'react-materialize'
 
 export default function App() {
   return (
@@ -9,9 +11,9 @@ export default function App() {
       <main className="main">
          {/* <Stylists /> */}
       </main>
-     <footer className="footer">
+     <Footer className="footer">
        <StylistRequest />
-     </footer>
+     </Footer>
     </div>
   );
 

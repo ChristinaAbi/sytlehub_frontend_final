@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Stylists (props) {
+function Stylists (props) {
     return (
          <div>
             {props.stylists.map( stylist => {
                 return (
-                    <div key={stylist.id} className="stylist">
+                    <div className="stylist">
                         <h2>
                             {stylist.name}
                         </h2>
@@ -24,3 +24,5 @@ export default function Stylists (props) {
          </div>
     )
 }
+
+export default Stylists

@@ -45,7 +45,7 @@ export default function StylistRequest(props) {
         style_type: "",
         descriptionOfEvent: "",
         IsEventInAWeek: ""
-      })
+      });
       setStylists([createdStylist, ...stylists])
     } catch (error) {
       console.error(error)
@@ -64,16 +64,18 @@ export default function StylistRequest(props) {
         </h3>
         <main>
           <form onSubmit={handleSubmit}>
+            <div className="input-field"> 
             <label htmlFor="name">Your Name: </label>
             <input
               type="text"
+              class="validate"
               id="name"
               value={formInputs.name}
-              onChange={handleChange} />
+              onChange={handleChange} /> 
             <br />
             <label htmlFor="location">City/State: </label>
             <input
-              type="text-area"
+              type="text"
               id="location"
               value={formInputs.location}
               onChange={handleChange} />
@@ -87,7 +89,7 @@ export default function StylistRequest(props) {
             <br />  
             <label htmlFor="descriptionOfEvent">Event Type: </label>
             <input
-              type="text"
+              type="text-area"
               id="descriptionOfEvent"
               value={formInputs.descriptionOfEvent}
               onChange={handleChange} />
@@ -95,11 +97,14 @@ export default function StylistRequest(props) {
             <label htmlFor="isEventInAWeek">Is the Event in a Week: </label>
             <input
               type="checkbox"
-              id="location"
+              class="filled-in"
+              id="isEventInAWeek"
               value={formInputs.IsEventInAWeek}
               onChange={handleChange} />
             <br />  
-            <input type="submit" className="submit" />
+            </div>
+            <input type="submit" className="submit"
+            onChange={handleSubmit} />
           </form>
           <br />
         </main>
