@@ -13,7 +13,7 @@ export default function StylistRequest(props) {
   })
   const getStylists = async () => {
     try {
-      const response = await fetch('http://localhost:3000/stylists');
+      const response = await fetch('https://stylehub-api.herokuapp.com');
       const data = await response.json();
       console.log(data)
       setStylists(data);
@@ -37,7 +37,7 @@ export default function StylistRequest(props) {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/users', formInputs);
+      const response = await axios.post('https://stylehub-api.herokuapp.com', formInputs);
       const createdStylist = response.data;
       updateFormInputs({
         name: "",
